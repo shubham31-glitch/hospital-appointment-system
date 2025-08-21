@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: hospital-appointment-backend
+  datasource:
+    url: jdbc:mysql://localhost:3306/hospital?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: secret
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+app:
+  jwt:
+    # base64("super-secret-change-me")
+    secret: c3VwZXItc2VjcmV0LWNoYW5nZS1tZQ==
+    expiration-ms: 3600000
+
